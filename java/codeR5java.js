@@ -12,13 +12,11 @@ for (i = 0; i < jsonData.length; i++) {
     				<h4 class="row mt-3">${jsonData[i].name}</h4>
     				<p class="row h-50">${jsonData[i].description}</p>
     				<div class ="row p-4">
-    				
-    					<button type="button" class="btn btn-success btn-sm active col-2 offset-5"><i class="fa fa-thumbs-o-up"></i>Like</button>
+    					<button type="button" class="btn btn-success btn-sm active col-2 offset-5">Like</button>
     					<img class="ml-2" id="thumbsup" src="images/thumbsup.png">
     					<div class="circle bg-green ml-2" id="circle${i}">
     					<p id="${i}">${jsonData[i].likes}</p>
     					</div>
-
     				</div>
     			</div>
     		</div>
@@ -36,7 +34,7 @@ for (let i = 0; i < jsonData.length; i++) {
 }
 
 $('.btn-success').on('click', function() {
-    var x = $(this).parent().find(".circle p").attr('id');
+    let x = $(this).parent().find(".circle p").attr('id');
     console.log(x);
     jsonData[x].likes++;
     console.log("input is " + jsonData[x].likes);
