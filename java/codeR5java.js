@@ -31,18 +31,15 @@ for (i = 0; i < jsonData.length; i++) {
 
 // this is where we will put stuff for the like button
 
-for (let i = 0; i <jsonData.length ; i++) {
-	$('.btn-info:eq('+i+')').after(`<p id=${i}>${jsonData[i].likes}</p>`);
+for (let i = 0; i < jsonData.length; i++) {
+    $('.btn-info:eq(' + i + ')').after(`<p id=${i}>${jsonData[i].likes}</p>`);
 }
 
-$('.btn-success').on('click',function()
-    {
-        var x = $(this).parent().find(".circle p").attr('id');
-        console.log(x);
-        jsonData[x].likes ++;
-        console.log("input is " + jsonData[x].likes);
-        $(`#${x}`).text(jsonData[x].likes);
-        console.log("final is " + jsonData[x].quantity);
-    })
-
-
+$('.btn-success').on('click', function() {
+    var x = $(this).parent().find(".circle p").attr('id');
+    console.log(x);
+    jsonData[x].likes++;
+    console.log("input is " + jsonData[x].likes);
+    $(`#${x}`).text(jsonData[x].likes);
+    console.log("final is " + jsonData[x].quantity);
+})
